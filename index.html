@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danyal Iftikhar - Digital Marketing Specialist Ireland</title>
+<meta name="description" content="Danyal Iftikhar - E-commerce & Digital Marketing Specialist based in Ireland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;color:#333;background:#fff;line-height:1.6;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:#e91e8c;text-decoration:none;}
+
+/* ─── NAV (matches Canva flat horizontal links) ─── */
+.topnav{
+  display:flex;align-items:center;justify-content:center;
+  gap:2rem;padding:12px 2rem;
+  background:#fff;border-bottom:1px solid #f0f0f0;
+  position:sticky;top:0;z-index:100;
+  flex-wrap:wrap;
+}
+.topnav a{
+  font-size:11.5px;font-weight:600;color:#444;
+  text-transform:uppercase;letter-spacing:1px;
+  padding:4px 0;transition:color .2s;
+}
+.topnav a:hover,.topnav a.active{color:#e91e8c;}
+.topnav .nav-hire{
+  background:#e91e8c;color:#fff!important;
+  padding:6px 18px;border-radius:20px;font-size:11px;
+}
+.topnav .nav-hire:hover{background:#d4177e;}
+
+/* ─── HERO (pink gradient bg, circular photo, centered) ─── */
+.hero{
+  text-align:center;
+  padding:48px 20px 42px;
+  background:linear-gradient(180deg,#fce4f3 0%,#fff 100%);
+}
+.hero-photo-ring{
+  width:165px;height:165px;margin:0 auto 22px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#e91e8c,#f472b6);
+  padding:4px;
+}
+.hero-photo-ring img{
+  width:100%;height:100%;border-radius:50%;object-fit:cover;
+  background:#ccc;
+}
+.hero-photo-ring .placeholder{
+  width:100%;height:100%;border-radius:50%;
+  background:linear-gradient(135deg,#1a1a2e,#3b1f4a);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:44px;font-family:'Libre Baskerville',serif;font-weight:700;
+}
+.hero h1{
+  font-family:'Libre Baskerville',serif;
+  font-size:36px;font-weight:700;color:#1a1a1a;
+}
+.hero h1 .star{color:#e91e8c;font-size:26px;vertical-align:middle;}
+.hero .role{
+  display:block;margin-top:8px;
+  font-size:12px;font-weight:600;color:#e91e8c;
+  letter-spacing:1.2px;text-transform:uppercase;
+}
+.hero .desc{
+  font-size:13px;color:#666;max-width:560px;margin:14px auto 0;
+  line-height:1.8;font-weight:400;
+}
+.btn-pink{
+  display:inline-block;margin-top:20px;
+  background:#e91e8c;color:#fff;
+  padding:10px 34px;border-radius:25px;
+  font-size:13.5px;font-weight:600;
+  transition:background .2s,transform .15s;
+  border:none;cursor:pointer;
+}
+.btn-pink:hover{background:#d4177e;transform:translateY(-1px);color:#fff;}
+
+/* ─── COMMON ─── */
+.section{padding:48px 20px;max-width:880px;margin:0 auto;}
+.section-gray{background:#fafafa;}
+.section-title{
+  font-family:'Libre Baskerville',serif;
+  font-size:26px;font-weight:700;
+  text-align:center;margin-bottom:30px;color:#1a1a1a;
+}
+
+/* ─── INTRO ─── */
+.intro-block{
+  max-width:720px;margin:0 auto;padding:32px 20px;
+  font-size:13px;color:#555;line-height:1.85;text-align:center;
+}
+
+/* ─── EDUCATION ─── */
+.edu-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.edu-card{
+  flex:1;min-width:250px;max-width:380px;
+  border:1px solid #eee;border-radius:8px;padding:18px 22px;background:#fff;
+}
+.edu-card h3{font-size:13.5px;font-weight:700;margin-bottom:2px;}
+.edu-card .school{color:#e91e8c;font-size:12.5px;font-weight:500;}
+.edu-card .year{color:#aaa;font-size:11.5px;margin-top:2px;}
+
+/* ─── WORK EXPERIENCE ─── */
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;}
+.exp-card{
+  border:1px solid #eee;border-radius:8px;padding:18px 22px;
+  background:#fff;border-left:3px solid #e91e8c;
+}
+.exp-card h3{font-size:13.5px;font-weight:700;margin-bottom:2px;}
+.exp-card .company{color:#e91e8c;font-size:12.5px;font-weight:500;}
+.exp-card .dates{color:#aaa;font-size:11.5px;margin:2px 0 8px;}
+.exp-card p{font-size:12px;color:#777;line-height:1.7;}
+
+/* ─── TESTIMONIALS ─── */
+.testi{max-width:600px;margin:0 auto;text-align:center;position:relative;padding:0 20px;}
+.testi .big-quote{
+  font-family:'Libre Baskerville',serif;
+  font-size:90px;color:#e91e8c;opacity:.2;
+  position:absolute;top:-24px;right:10px;line-height:1;
+  pointer-events:none;
+}
+.testi p{font-size:13.5px;color:#555;font-style:italic;line-height:1.85;margin-bottom:10px;}
+.testi .author{font-size:12.5px;font-weight:600;color:#333;}
+
+/* ─── SKILLS ─── */
+.skills-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:14px;max-width:780px;margin:0 auto;
+}
+.skill-box{
+  text-align:center;padding:22px 14px;
+  border:1px solid #eee;border-radius:8px;background:#fff;
+  transition:box-shadow .2s;
+}
+.skill-box:hover{box-shadow:0 3px 14px rgba(0,0,0,.05);}
+.skill-box .ico{font-size:26px;margin-bottom:6px;display:block;}
+.skill-box h4{font-size:12.5px;font-weight:700;margin-bottom:3px;}
+.skill-box p{font-size:11px;color:#999;line-height:1.5;}
+
+/* ─── TOOLS ─── */
+.tools-flex{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:9px;
+  max-width:780px;margin:0 auto;
+}
+.tool-chip{
+  display:flex;align-items:center;gap:6px;
+  border:1px solid #e8e8e8;border-radius:6px;
+  padding:7px 13px;font-size:11.5px;font-weight:500;color:#444;background:#fff;
+  transition:border-color .2s;
+}
+.tool-chip:hover{border-color:#e91e8c;color:#e91e8c;}
+.tool-chip .dot{width:7px;height:7px;border-radius:50%;background:#e91e8c;flex-shrink:0;}
+
+/* ─── PROJECTS ─── */
+.proj-tabs{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-bottom:26px;
+}
+.ptab{
+  padding:6px 18px;border-radius:20px;
+  border:2px solid #f3d4e8;background:transparent;
+  color:#888;font-size:11.5px;font-weight:600;
+  cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;
+}
+.ptab.on,.ptab:hover{background:#e91e8c;color:#fff;border-color:#e91e8c;}
+
+.pcard{
+  background:#fff;border:1px solid #eee;border-radius:10px;
+  padding:26px;margin-bottom:22px;position:relative;overflow:hidden;
+}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e91e8c,#f472b6);}
+.pcard h3{font-family:'Libre Baskerville',serif;font-size:19px;font-weight:700;color:#1a1a1a;margin-bottom:3px;}
+.pcard .psub{font-family:'Dancing Script',cursive;font-size:17px;color:#e91e8c;margin-bottom:8px;}
+.pcard p{font-size:12.5px;color:#666;line-height:1.75;margin-bottom:8px;}
+
+.pcard .shot{
+  background:#f7f7f7;border:1px dashed #ddd;border-radius:6px;
+  padding:28px 16px;margin:10px 0;text-align:center;
+  color:#bbb;font-size:11.5px;font-style:italic;
+}
+
+.pstats{display:flex;gap:22px;flex-wrap:wrap;margin:10px 0;}
+.pst{text-align:center;}
+.pst .n{font-size:20px;font-weight:800;color:#e91e8c;font-family:'Libre Baskerville',serif;}
+.pst .l{font-size:9.5px;color:#aaa;text-transform:uppercase;letter-spacing:.4px;}
+.ptags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.ptags span{background:#fdf2f8;color:#e91e8c;padding:3px 10px;border-radius:12px;font-size:10.5px;font-weight:600;}
+
+/* ─── CERTIFICATIONS ─── */
+.cert-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+  gap:12px;max-width:780px;margin:0 auto;
+}
+.cert{display:flex;align-items:center;gap:10px;border:1px solid #eee;border-radius:8px;padding:12px 16px;background:#fff;}
+.cert .badge{
+  width:40px;height:40px;border-radius:50%;background:#fdf2f8;
+  display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;
+}
+.cert h4{font-size:12px;font-weight:700;line-height:1.3;}
+.cert .iss{font-size:10.5px;color:#aaa;}
+
+/* ─── CTA ─── */
+.cta{background:#1a1a2e;color:#fff;text-align:center;padding:68px 20px;}
+.cta h2{
+  font-family:'Libre Baskerville',serif;
+  font-size:clamp(30px,6vw,50px);font-weight:700;line-height:1.15;margin-bottom:14px;
+}
+.cta p{font-size:13.5px;opacity:.65;max-width:420px;margin:0 auto 22px;}
+.cta .btn-pink{font-size:14.5px;padding:12px 36px;}
+
+footer{
+  background:#1a1a2e;text-align:center;padding:12px;
+  font-size:10.5px;color:rgba(255,255,255,.3);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+/* ─── ANIMATIONS ─── */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s;}
+.rv.vis{opacity:1;transform:translateY(0);}
+
+/* ─── MOBILE ─── */
+@media(max-width:680px){
+  .topnav{gap:.9rem;padding:10px 14px;}
+  .topnav a{font-size:10px;letter-spacing:.4px;}
+  .hero h1{font-size:26px;}
+  .hero-photo-ring{width:120px;height:120px;}
+  .section{padding:34px 16px;}
+  .exp-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:repeat(2,1fr);}
+  .pcard{padding:18px;}
+  .cta{padding:48px 18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a href="#about" class="active">HOME</a>
+  <a href="#skills">SKILLS</a>
+  <a href="#projects">PROJECTS</a>
+  <a href="#certs">CERTIFICATIONS</a>
+  <a href="#contact">CONTACT</a>
+  <a href="#contact" class="nav-hire">HIRE ME</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-photo-ring">
+    <!-- ✏️ Replace with: <img src="your-photo.jpg" alt="Danyal Iftikhar"> -->
+    <div class="placeholder">DI</div>
+  </div>
+  <h1>Danyal Iftikhar <span class="star">★</span></h1>
+  <span class="role">E-commerce &amp; Digital Marketing Specialist — Ireland</span>
+  <p class="desc">
+    I am a highly skilled digital marketing professional specialising in e-commerce web development, 
+    Shopify, Google Ads, SEO, and Amazon. Based in Ireland, I help businesses build high-performing 
+    online stores and drive revenue through data-driven digital strategies.
+  </p>
+  <a href="#contact" class="btn-pink">Hire Me</a>
+</section>
+
+<!-- INTRO -->
+<div class="intro-block rv">
+  A results-driven digital marketing specialist with hands-on experience in Shopify store development, 
+  GTM/GA4 analytics, Google Merchant Center, Amazon Seller Central, and paid advertising across Google &amp; Meta. 
+  I combine technical development skills with marketing strategy to deliver measurable growth.
+</div>
+
+<!-- EDUCATION -->
+<div class="section rv">
+  <h2 class="section-title">Education</h2>
+  <div class="edu-row">
+    <div class="edu-card">
+      <h3>Bs. Digital Marketing &amp; Advertising</h3>
+      <div class="school">University — Pakistan</div>
+      <div class="year">2014 – 2018</div>
+    </div>
+    <div class="edu-card">
+      <h3>Diploma in Web Development</h3>
+      <div class="school">Aptech Computer Education</div>
+      <div class="year">2012 – 2014</div>
+    </div>
+  </div>
+</div>
+
+<!-- WORK EXPERIENCE -->
+<div class="section-gray">
+<div class="section rv">
+  <h2 class="section-title">Work Experience</h2>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <h3>E-commerce &amp; Web Developer</h3>
+      <div class="company">LED Auto EU / LED Global MM GmbH</div>
+      <div class="dates">2023 – Present · Ireland</div>
+      <p>Shopify theme development, GTM/GA4 analytics, Google Merchant Center, Amazon Seller Central, and technical SEO across 13,700+ products.</p>
+    </div>
+    <div class="exp-card">
+      <h3>Brand Manager — Amazon Specialist</h3>
+      <div class="company">TikTok Shop / Amazon</div>
+      <div class="dates">2020 – 2023</div>
+      <p>Amazon PPC, listing optimisation, A+ content, product launches, keyword research, inventory management, and brand storefront development.</p>
+    </div>
+    <div class="exp-card">
+      <h3>Web Designer &amp; Developer</h3>
+      <div class="company">Aptech</div>
+      <div class="dates">2018 – 2020</div>
+      <p>Front-end development, responsive design, and training solutions.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section rv">
+  <h2 class="section-title">Testimonials</h2>
+  <div class="testi">
+    <div class="big-quote">"</div>
+    <p>Danyal is an exceptional professional who consistently delivers results. His expertise in Shopify and digital marketing helped us dramatically improve our online performance and revenue.</p>
+    <div class="author">— Client Review</div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section-gray">
+<div class="section rv" id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-box"><span class="ico">🔍</span><h4>SEO</h4><p>Technical &amp; on-page SEO, keyword research</p></div>
+    <div class="skill-box"><span class="ico">📈</span><h4>Google Ads</h4><p>PPC, Performance Max, Shopping campaigns</p></div>
+    <div class="skill-box"><span class="ico">🛒</span><h4>E-commerce</h4><p>Shopify, product feeds, conversions</p></div>
+    <div class="skill-box"><span class="ico">🌐</span><h4>Amazon</h4><p>Seller Central, PPC, A+ content</p></div>
+    <div class="skill-box"><span class="ico">💻</span><h4>Web Dev</h4><p>HTML, CSS, JS, Liquid themes</p></div>
+    <div class="skill-box"><span class="ico">📊</span><h4>Analytics</h4><p>GA4, GTM, data layers, tracking</p></div>
+    <div class="skill-box"><span class="ico">🎨</span><h4>Web Design</h4><p>Figma, UI/UX, responsive layouts</p></div>
+    <div class="skill-box"><span class="ico">📱</span><h4>Social Ads</h4><p>Facebook Ads, lead gen, targeting</p></div>
+  </div>
+</div>
+</div>
+
+<!-- TOOLS -->
+<div class="section rv">
+  <h2 class="section-title">Tools</h2>
+  <div class="tools-flex">
+    <div class="tool-chip"><span class="dot"></span>Google Analytics</div>
+    <div class="tool-chip"><span class="dot"></span>Google Tag Manager</div>
+    <div class="tool-chip"><span class="dot"></span>Google Ads</div>
+    <div class="tool-chip"><span class="dot"></span>Google Merchant Center</div>
+    <div class="tool-chip"><span class="dot"></span>Shopify</div>
+    <div class="tool-chip"><span class="dot"></span>Amazon Seller Central</div>
+    <div class="tool-chip"><span class="dot"></span>Ahrefs</div>
+    <div class="tool-chip"><span class="dot"></span>SEMrush</div>
+    <div class="tool-chip"><span class="dot"></span>Figma</div>
+    <div class="tool-chip"><span class="dot"></span>Canva</div>
+    <div class="tool-chip"><span class="dot"></span>Meta Ads Manager</div>
+    <div class="tool-chip"><span class="dot"></span>Hotjar</div>
+    <div class="tool-chip"><span class="dot"></span>Mailchimp</div>
+    <div class="tool-chip"><span class="dot"></span>WordPress</div>
+    <div class="tool-chip"><span class="dot"></span>HTML / CSS / JS</div>
+    <div class="tool-chip"><span class="dot"></span>Liquid</div>
+    <div class="tool-chip"><span class="dot"></span>AI Tools</div>
+    <div class="tool-chip"><span class="dot"></span>AppsFlyer</div>
+    <div class="tool-chip"><span class="dot"></span>Mintegral</div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section-gray">
+<div class="section" id="projects">
+  <h2 class="section-title rv">Welcome to My Projects Section</h2>
+  <div class="proj-tabs rv">
+    <button class="ptab on" onclick="fp('all',this)">All</button>
+    <button class="ptab" onclick="fp('seo',this)">SEO</button>
+    <button class="ptab" onclick="fp('ads',this)">Google Ads</button>
+    <button class="ptab" onclick="fp('amazon',this)">Amazon</button>
+    <button class="ptab" onclick="fp('shopify',this)">Shopify</button>
+    <button class="ptab" onclick="fp('design',this)">Web Design</button>
+  </div>
+
+  <div class="pcard rv" data-c="seo">
+    <h3>Scope SEO</h3>
+    <div class="psub">Real Estate SEO — Ranked to TOP</div>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>Comprehensive SEO strategy for a real estate website — achieved first-page SERP rankings for competitive local keywords through technical SEO, content optimisation, and link building.</p>
+    <div class="pstats">
+      <div class="pst"><div class="n">#1</div><div class="l">Google Ranking</div></div>
+      <div class="pst"><div class="n">300%</div><div class="l">Traffic Increase</div></div>
+      <div class="pst"><div class="n">TOP</div><div class="l">SERP Position</div></div>
+    </div>
+    <div class="ptags"><span>SEO</span><span>Technical SEO</span><span>Content</span><span>Link Building</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="amazon">
+    <h3>Optazo — Amazon Storefront Results</h3>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>Built and optimised Amazon storefront with enhanced brand content, PPC strategy, listing optimisation, and keyword targeting.</p>
+    <div class="pstats">
+      <div class="pst"><div class="n">4,181</div><div class="l">New Visitors</div></div>
+      <div class="pst"><div class="n">145%</div><div class="l">Sales Increase</div></div>
+      <div class="pst"><div class="n">↑</div><div class="l">Improved CTR</div></div>
+    </div>
+    <div class="ptags"><span>Amazon</span><span>PPC</span><span>Storefront</span><span>A+ Content</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="ads">
+    <h3>Project — Google Ads (Clothing Brand)</h3>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>End-to-end Google Ads campaign management across search, display, and shopping networks. Optimised bidding strategies and audiences for maximum ROAS.</p>
+    <div class="ptags"><span>Google Ads</span><span>PPC</span><span>Shopping</span><span>ROAS</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="ads">
+    <h3>Google Ads (Mobile Game)</h3>
+    <div class="psub">Google Ads (KPI's of Mobile Games)</div>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>Google Ads for mobile game user acquisition across search, display, and video. CPI optimisation and scaled installs.</p>
+    <div class="ptags"><span>Google Ads</span><span>Mobile Games</span><span>CPI</span><span>UA</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="shopify">
+    <h3>Project — Shopify Store Development</h3>
+    <div class="psub">Scoop Joyfully, Dairy-Free</div>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>Complete Shopify store for a dairy-free brand — custom theme, product setup, payments, and performance optimisation.</p>
+    <div class="ptags"><span>Shopify</span><span>E-commerce</span><span>Theme Dev</span><span>Liquid</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="design">
+    <h3>Web Design Using FIGMA</h3>
+    <div class="psub">Rare Beauty, Style Threads</div>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>Modern responsive website layouts in Figma for beauty and fashion brands. Wireframe to high-fidelity mockup.</p>
+    <div class="ptags"><span>Figma</span><span>UI/UX</span><span>Web Design</span><span>Prototyping</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="ads">
+    <h3>User Acquisition (Mintegral Network)</h3>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>User acquisition campaigns via Mintegral for mobile apps — installs and in-app engagement at scale.</p>
+    <div class="ptags"><span>Mintegral</span><span>UA</span><span>Mobile Ads</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="ads">
+    <h3>User's ROAS Tracking via AppsFlyer</h3>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>ROAS tracking and attribution via AppsFlyer — event tracking, deep linking, revenue attribution across channels.</p>
+    <div class="ptags"><span>AppsFlyer</span><span>ROAS</span><span>Attribution</span><span>Analytics</span></div>
+  </div>
+
+  <div class="pcard rv" data-c="ads">
+    <h3>Facebook Leads Generation (Real Estate)</h3>
+    <div class="shot">📸 Replace with your project screenshot</div>
+    <p>Facebook lead gen campaigns for real estate — audience targeting, ad creatives, and lead forms for quality leads at low CPL.</p>
+    <div class="ptags"><span>Facebook Ads</span><span>Lead Gen</span><span>Real Estate</span><span>CPL</span></div>
+  </div>
+</div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section rv" id="certs">
+  <h2 class="section-title">Certifications</h2>
+  <div class="cert-grid">
+    <div class="cert"><div class="badge">🏆</div><div><h4>Google Ads Certification</h4><div class="iss">Google</div></div></div>
+    <div class="cert"><div class="badge">📊</div><div><h4>Google Analytics Certified</h4><div class="iss">Google</div></div></div>
+    <div class="cert"><div class="badge">📘</div><div><h4>HubSpot Inbound Marketing</h4><div class="iss">HubSpot</div></div></div>
+    <div class="cert"><div class="badge">🛒</div><div><h4>Shopify Partner</h4><div class="iss">Shopify</div></div></div>
+    <div class="cert"><div class="badge">🌐</div><div><h4>Amazon Advertising</h4><div class="iss">Amazon</div></div></div>
+    <div class="cert"><div class="badge">🔍</div><div><h4>SEMrush SEO Toolkit</h4><div class="iss">SEMrush</div></div></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2>LET'S WORK<br>TOGETHER</h2>
+  <p>Ready to grow your business online? Let's discuss your digital goals.</p>
+  <a href="mailto:hello@danyal.ie" class="btn-pink">Get In Touch</a>
+</section>
+
+<footer>© 2026 Danyal Iftikhar · All rights reserved</footer>
+
+<script>
+// Reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// Filter projects
+function fp(c,btn){
+  document.querySelectorAll('.pcard').forEach(el=>{el.style.display=(c==='all'||el.dataset.c===c)?'block':'none';});
+  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+}
+
+// Nav highlight
+const secs=document.querySelectorAll('[id]');
+window.addEventListener('scroll',()=>{
+  let cur='';secs.forEach(s=>{if(scrollY>=s.offsetTop-120)cur=s.id;});
+  document.querySelectorAll('.topnav a:not(.nav-hire)').forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
+  });
+});
+</script>
+</body>
+</html>
